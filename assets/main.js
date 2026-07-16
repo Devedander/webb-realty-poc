@@ -6,3 +6,7 @@ const reveals=document.querySelectorAll('.reveal');const io=new IntersectionObse
 const motionOK=!matchMedia('(prefers-reduced-motion: reduce)').matches;const movers=[...document.querySelectorAll('.momentum')];let current=0,target=0,ticking=false;
 function frame(){current+=(target-current)*.08;movers.forEach(el=>{const speed=Number(el.dataset.speed||.05);const rect=el.getBoundingClientRect();if(rect.bottom>0&&rect.top<innerHeight)el.style.transform=`translate3d(0,${(current-el.offsetTop)*speed}px,0)`});if(Math.abs(target-current)>.2)requestAnimationFrame(frame);else ticking=false}
 if(motionOK)addEventListener('scroll',()=>{target=scrollY;if(!ticking){ticking=true;requestAnimationFrame(frame)}},{passive:true});
+const footerLinks=document.querySelector('footer > div');
+if(footerLinks&&!footerLinks.querySelector('.site-credit')){
+  footerLinks.insertAdjacentHTML('beforeend','<a class="site-credit" href="https://johnwangcs.com" target="_blank" rel="noopener noreferrer">Website by johnwangcs.com</a>');
+}
