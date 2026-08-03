@@ -24,3 +24,6 @@ body.inner{background:var(--paper)}.inner .site-header{position:sticky;backgroun
 a[href*="agent=karen"] .avatar img,#agent-photo[src*="karen-webb"]{object-position:38% 50%}
 a[href*="agent=jeffrey"] .avatar img,#agent-photo[src*="jeffrey"]{object-position:46% 50%}
 a[href*="agent=naomi"] .avatar img,#agent-photo[src*="naomi"]{object-position:50% 50%}
+.agents-heading{margin:70px 0 0}
+.prose-after-agents{margin-top:60px}
+.agent-grid{margin-top:30px}
