@@ -13,3 +13,14 @@ if(toc){
   const spy=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle('current',l.getAttribute('href').slice(1)===e.target.id))}})},{rootMargin:'-100px 0px -70% 0px'});
   heads.forEach(h=>spy.observe(h));
 }
+
+const dcard=document.querySelector('.doc-card'),dtoc=document.querySelector('.doc-toc');
+if(dcard&&dtoc){
+  const match=()=>{
+    if(getComputedStyle(dtoc).display==='none'){dcard.style.minHeight='';return}
+    dcard.style.minHeight=dtoc.offsetHeight+'px';
+  };
+  match();
+  addEventListener('resize',match,{passive:true});
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(match);
+}

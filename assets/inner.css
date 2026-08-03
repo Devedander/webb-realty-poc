@@ -35,7 +35,7 @@ a[href*="agent=naomi"] .avatar img,#agent-photo[src*="naomi"]{object-position:50
 .doc-toc a:hover{color:var(--forest)}
 .doc-toc a.current{border-left-color:var(--grass);color:var(--forest)}
 .doc-aside{position:sticky;top:110px}
-.doc-card{display:flex;flex-direction:column;min-height:66vh;padding:34px 30px;background:white;border-top:3px solid var(--grass)}
+.doc-card{display:flex;flex-direction:column;padding:34px 30px;background:white;border-top:3px solid var(--grass)}
 .doc-card h2{font:400 30px/1.05 var(--serif);margin:6px 0 4px}
 .doc-card .role{margin:0 0 18px;font-size:10px;text-transform:uppercase;letter-spacing:.11em;color:#7d8984}
 .doc-card p{font-size:14px;color:#46564f}
