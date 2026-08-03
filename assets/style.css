@@ -24,7 +24,7 @@ footer .licenses{display:block;margin-top:10px;color:rgba(255,255,255,.5);line-h
 .agent-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding:0 clamp(24px,8vw,120px) 110px;background:var(--forest)}
 .agent-cards a{background:rgba(255,255,255,.06);transition:transform .35s var(--ease)}
 .agent-cards a:hover{transform:translateY(-6px)}
-.agent-cards a{text-align:center}
+
 .agent-cards div{padding:22px}
 .agent-cards h3{font:400 27px var(--serif);margin:0 0 5px;color:white}
 .agent-cards p{margin:0;font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--grass)}
@@ -43,10 +43,9 @@ footer .licenses{display:block;margin-top:10px;color:rgba(255,255,255,.5);line-h
 .agents-section .agent-cards p{color:#66756f}
 @media(max-width:900px){.tagline-band{grid-template-columns:1fr;gap:38px;padding:80px 24px}}
 
-.avatar{display:block;width:262px;height:262px;border-radius:50%;overflow:hidden;margin:32px auto 0;background:var(--fog)}
-.avatar-lg{width:325px;height:325px;margin:0 auto}
-.avatar img{width:100%;height:100%;object-fit:cover;display:block;transform:scale(1.35) translate(0,10%);transform-origin:center}
-a[href*="agent=karen"] .avatar img,#agent-photo[src*="karen-webb"]{transform:scale(1.35) translate(12%,12%)}
-a[href*="agent=jeffrey"] .avatar img,#agent-photo[src*="jeffrey"]{transform:scale(1.35) translate(3%,12%)}
-a[href*="agent=naomi"] .avatar img,#agent-photo[src*="naomi"]{transform:scale(1.35) translate(0,10%)}
-@media(max-width:650px){.avatar{width:220px;height:220px}}
+.avatar{display:block;width:100%;aspect-ratio:4/5;overflow:hidden;margin:0;background:var(--fog)}
+.avatar-lg{width:100%;max-width:420px;aspect-ratio:4/5;margin:0}
+.avatar img{width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block;transform:none}
+a[href*="agent=karen"] .avatar img,#agent-photo[src*="karen-webb"]{object-position:38% 50%}
+a[href*="agent=jeffrey"] .avatar img,#agent-photo[src*="jeffrey"]{object-position:46% 50%}
+a[href*="agent=naomi"] .avatar img,#agent-photo[src*="naomi"]{object-position:50% 50%}
