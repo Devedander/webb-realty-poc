@@ -34,7 +34,7 @@ a[href*="agent=naomi"] .avatar img,#agent-photo[src*="naomi"]{object-position:50
 .doc-toc a{display:block;padding:7px 0 7px 16px;margin-left:-1px;border-left:1px solid transparent;color:#56655e;text-decoration:none;line-height:1.3}
 .doc-toc a:hover{color:var(--forest)}
 .doc-toc a.current{border-left-color:var(--grass);color:var(--forest)}
-.doc-aside{position:sticky;top:110px}
+.doc-aside{position:sticky;top:calc(66vh - 150px);margin-top:26vh}
 .doc-card{padding:30px;background:white;border-top:3px solid var(--grass)}
 .doc-card h2{font:400 30px/1.05 var(--serif);margin:6px 0 4px}
 .doc-card .role{margin:0 0 18px;font-size:10px;text-transform:uppercase;letter-spacing:.11em;color:#7d8984}
@@ -49,3 +49,4 @@ a[href*="agent=naomi"] .avatar img,#agent-photo[src*="naomi"]{object-position:50
 .doc-body .agents-heading,.doc-body .agent-grid{margin-left:0;margin-right:0;max-width:880px}
 .doc-toc li.lvl3 a{padding-left:30px;font-size:12px;color:#6a7872}
 .doc-layout h3[id]{scroll-margin-top:100px}
+@media(max-height:760px){.doc-aside{top:calc(60vh - 150px);margin-top:18vh}}
