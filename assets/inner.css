@@ -44,3 +44,8 @@ a[href*="agent=naomi"] .avatar img,#agent-photo[src*="naomi"]{object-position:50
 .doc-layout h2[id]{scroll-margin-top:100px}
 @media(max-width:1400px){.doc-layout{grid-template-columns:190px minmax(0,780px) 240px}}
 @media(max-width:1150px){.doc-layout{grid-template-columns:minmax(0,880px);justify-content:center}.doc-toc{display:none}.doc-aside{position:static;margin-top:50px}}
+.doc-body{min-width:0}
+.doc-body .prose{margin:0;max-width:880px}
+.doc-body .agents-heading,.doc-body .agent-grid{margin-left:0;margin-right:0;max-width:880px}
+.doc-toc li.lvl3 a{padding-left:30px;font-size:12px;color:#6a7872}
+.doc-layout h3[id]{scroll-margin-top:100px}
