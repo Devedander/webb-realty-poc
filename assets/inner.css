@@ -49,3 +49,15 @@ a[href*="agent=naomi"] .avatar img,#agent-photo[src*="naomi"]{object-position:50
 .doc-body .agents-heading,.doc-body .agent-grid{margin-left:0;margin-right:0;max-width:880px}
 .doc-toc li.lvl3 a{padding-left:30px;font-size:12px;color:#6a7872}
 .doc-layout h3[id]{scroll-margin-top:100px}
+.doc-toc{max-height:calc(100vh - 140px);overflow-y:auto}
+.doc-toc a{padding:11px 0 11px 16px}
+.doc-body .agent-grid{grid-template-columns:1fr 1fr}
+@media(min-width:1601px){.doc-body .agent-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:1150px){.doc-body .agent-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:900px){.doc-body .agent-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:650px){.doc-body .agent-grid{grid-template-columns:1fr}}
+.inner .site-header{height:82px}
+@media(max-width:720px){.inner .site-header{height:70px}}
+.prose h2,.agents-heading{font-size:clamp(34px,6vw,52px)}
+.prose h3{font-size:clamp(26px,4vw,32px)}
+.search-box h2,.detail-body h2{font-size:clamp(32px,5vw,48px)}
