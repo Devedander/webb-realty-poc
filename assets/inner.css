@@ -14,3 +14,4 @@ body.inner{background:var(--paper)}.inner .site-header{position:sticky;backgroun
 .prose .link-list{list-style:none;padding:0}
 .prose .link-list li{margin-bottom:12px}
 .agents-heading{font:400 52px/1 var(--serif);margin:70px 0 0}
+.prose p>strong>a{word-break:break-all;font-weight:400}
