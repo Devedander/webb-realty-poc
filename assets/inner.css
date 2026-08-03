@@ -13,3 +13,4 @@ body.inner{background:var(--paper)}.inner .site-header{position:sticky;backgroun
 .prose .attribution{margin-top:26px;font-size:13px;font-style:italic;color:#607068}
 .prose .link-list{list-style:none;padding:0}
 .prose .link-list li{margin-bottom:12px}
+.agents-heading{font:400 52px/1 var(--serif);margin:70px 0 0}
