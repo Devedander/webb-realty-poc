@@ -15,3 +15,5 @@ body.inner{background:var(--paper)}.inner .site-header{position:sticky;backgroun
 .prose .link-list li{margin-bottom:12px}
 .agents-heading{font:400 52px/1 var(--serif);margin:70px 0 0}
 .page-photo{margin:45px 0 0}.page-photo img{max-width:418px;width:100%;height:auto}
+.prose blockquote{margin:26px 0 0;padding:20px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font:italic 26px/1.25 var(--serif);color:var(--forest)}
+.prose .role{margin:0 0 22px;color:#7d8984;text-transform:uppercase;letter-spacing:.12em;font-size:11px}

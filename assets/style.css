@@ -32,3 +32,13 @@ footer .licenses{display:block;margin-top:10px;color:rgba(255,255,255,.5);line-h
 @media(max-width:650px){.agent-cards{grid-template-columns:1fr;padding-bottom:80px}}
 .property-info .facts{margin:14px 0 0;padding-top:14px;border-top:1px solid var(--line);font-size:12px;color:#66756f;text-transform:none;letter-spacing:0}
 .property-info>strong{margin-top:auto;padding-top:14px}
+.tagline-band{display:grid;grid-template-columns:.85fr 1.15fr;gap:6vw;align-items:center;padding:110px clamp(24px,8vw,120px);background:var(--fog)}
+.tagline-photo{overflow:hidden}
+.tagline-photo img{width:100%;height:auto;display:block}
+.tagline-copy p{max-width:640px;font:400 clamp(24px,2.6vw,36px)/1.28 var(--serif);color:var(--ink);margin:0 0 34px}
+.agents-section{padding:110px clamp(24px,5vw,72px) 0}
+.agents-section .agent-cards{padding:0;background:transparent}
+.agents-section .agent-cards a{background:white}
+.agents-section .agent-cards h3{color:var(--ink)}
+.agents-section .agent-cards p{color:#66756f}
+@media(max-width:900px){.tagline-band{grid-template-columns:1fr;gap:38px;padding:80px 24px}}
