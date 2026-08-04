@@ -6,6 +6,37 @@ const menu=document.querySelector('.menu-button'),menuNav=document.querySelector
 const grid=document.querySelector('[data-listings]');if(grid){grid.innerHTML=listings.map(x=>`<a class="listing-tile" href="listing.html?slug=${x.slug}"><img src="assets/images/listings/${x.image}" alt="${x.title}"><div><p class="eyebrow">${x.status}</p><h2>${x.title}</h2><p>${x.city}</p><strong>${x.price}</strong></div></a>`).join('')}
 const detail=document.querySelector('[data-listing-detail]');if(detail){const slug=new URLSearchParams(location.search).get('slug'),x=listings.find(y=>y.slug===slug);detail.innerHTML=x?`<section class="detail-hero"><img src="assets/images/listings/${x.image}" alt="${x.title}"><div class="detail-copy"><a class="back-link" href="listings.html">← All listings</a><p class="eyebrow">${x.status}</p><h1>${x.title}</h1><p>${x.city}</p><p class="price">${x.price}</p></div></section><section class="detail-body"><div><h2>${x.title}</h2>${x.description.split('\n\n').map(t=>'<p>'+t+'</p>').join('')}<p>${x.facts}</p></div><aside class="fact-box"><strong>Interested in this property?</strong><a href="tel:+17073342633">Call or text 707-334-2633</a><a href="mailto:karen.webbrealty@gmail.com">Email Karen Webb</a><a class="button primary" href="contact.html">Send a message</a></aside></section>`:`<div class="page-content"><div class="empty"><h1>Listing not found</h1><a href="listings.html">Return to all listings</a></div></div>`}
 
+const revealSelectors=[
+  '.page-hero > *',
+  '.doc-layout > .doc-toc',
+  '.doc-layout > .doc-aside',
+  '.doc-layout > .prose > *',
+  '.doc-body.prose > :not(.agent-grid)',
+  '.doc-body > .prose > *',
+  '.agent-grid > .agent-card',
+  '.listing-directory > .listing-tile',
+  '.search-box > *',
+  '.contact-page > *',
+  '.detail-hero > *',
+  '.detail-body > *',
+  '.empty > *',
+  '[data-site-footer] > *'
+];
+const revealElements=[...new Set(revealSelectors.flatMap(selector=>[...document.querySelectorAll(selector)]))];
+revealElements.forEach(el=>el.classList.add('reveal'));
+if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){
+  revealElements.forEach(el=>el.classList.add('visible'));
+}else{
+  const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
+    if(entry.isIntersecting){entry.target.classList.add('visible');revealObserver.unobserve(entry.target)}
+  }),{threshold:.12});
+  revealElements.forEach(el=>{
+    const siblings=revealElements.filter(item=>item.parentElement===el.parentElement);
+    el.style.transitionDelay=`${Math.min(siblings.indexOf(el),3)*70}ms`;
+    revealObserver.observe(el);
+  });
+}
+
 const toc=document.querySelector('.doc-toc');
 if(toc){
   const links=[...toc.querySelectorAll('a')];
