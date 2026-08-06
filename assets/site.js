@@ -24,6 +24,11 @@ const revealSelectors=[
 ];
 const revealElements=[...new Set(revealSelectors.flatMap(selector=>[...document.querySelectorAll(selector)]))];
 revealElements.forEach(el=>el.classList.add('reveal'));
+// The hero is already in view when an inner page opens.  Let it paint in its
+// starting position first, then reveal it on the following frame so it gets
+// the same soft fade-and-rise entrance as the home page rather than appearing
+// at whatever point the intersection observer happens to run.
+const entryElements=new Set(document.querySelectorAll('.page-hero > .reveal, .detail-hero > .reveal'));
 if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){
   revealElements.forEach(el=>el.classList.add('visible'));
 }else{
@@ -33,8 +38,9 @@ if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: red
   revealElements.forEach(el=>{
     const siblings=revealElements.filter(item=>item.parentElement===el.parentElement);
     el.style.transitionDelay=`${Math.min(siblings.indexOf(el),3)*70}ms`;
-    revealObserver.observe(el);
+    if(!entryElements.has(el))revealObserver.observe(el);
   });
+  requestAnimationFrame(()=>requestAnimationFrame(()=>entryElements.forEach(el=>el.classList.add('visible'))));
 }
 
 const toc=document.querySelector('.doc-toc');
