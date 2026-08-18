@@ -57,11 +57,13 @@ a[href*="agent=naomi"] .avatar img,#agent-photo[src*="naomi"]{object-position:50
 @media(max-width:1150px){.doc-body .agent-grid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:900px){.doc-body .agent-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:650px){.doc-body .agent-grid{grid-template-columns:1fr}}
+@media(min-width:901px){.doc-body .agent-grid{grid-template-columns:repeat(3,1fr)}}
+.agent-contact-row{display:flex;align-items:center;gap:24px;margin-top:24px}.agent-contact-row p{margin:0}.agent-contact-row .button{white-space:nowrap}@media(max-width:720px){.agent-contact-row{align-items:flex-start;flex-direction:column;gap:16px}}
 
 @media(min-width:721px){
   .contact-page{display:block;max-width:none;margin:0}
   .contact-page>.avatar{float:left;width:min(32vw,420px);margin:0 50px 32px 50px}
-  .contact-page>.prose{max-width:none;margin:0 15% 0 0;transform:translateX(20px)}
+  .contact-page>.prose{max-width:none;margin:0 15% 0 25px;transform:translateX(20px)}
   .contact-page::after{content:"";display:block;clear:both}
 }
 @media(max-width:720px){.contact-page>.avatar{float:none;margin:0}.contact-page>.prose{margin-right:0}}
