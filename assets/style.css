@@ -48,7 +48,7 @@ footer .licenses{display:block;margin-top:10px;color:rgba(255,255,255,.5);line-h
 a[href*="agent=karen"] .avatar img,#agent-photo[src*="karen-webb"]{object-position:38% 50%}
 a[href*="agent=jeffrey"] .avatar img,#agent-photo[src*="jeffrey"]{object-position:46% 50%}
 a[href*="agent=naomi"] .avatar img,#agent-photo[src*="naomi"]{object-position:50% 50%}.menu-button{min-width:44px;min-height:44px;display:none}
-@media(max-width:720px){.menu-button{display:flex;flex-direction:column;justify-content:center;align-items:center}.site-header nav a{padding:12px 0}}
+@media(max-width:720px){.menu-button{display:flex;flex-direction:column;justify-content:center;align-items:center;width:44px;height:44px;padding:0;border:1px solid rgba(255,255,255,.38);border-radius:50%;background:rgba(16,38,31,.9);color:#fff;box-shadow:0 2px 12px rgba(8,23,18,.22)}.menu-button span:not(.sr-only){width:22px;height:2px;margin:3px}.menu-button:focus-visible{outline:3px solid var(--grass);outline-offset:3px}.site-header.scrolled .menu-button{border-color:rgba(16,38,31,.18);background:var(--forest);color:#fff}.site-header nav a{padding:12px 0}}
 .nav-contact{padding:12px 18px}
 footer>div a{padding:6px 0}
 @media(max-width:980px){.agent-cards,.tagline-band{grid-template-columns:1fr}}
