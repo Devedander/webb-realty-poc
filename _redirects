@@ -1,0 +1,4 @@
+# Retire legacy WordPress and obsolete listing/agent URLs with a real 404.
+/agents/giana-wheless/  /404.html  404
+/listings/villa-road-forestville  /404.html  404
+/wp-content/plugins/*  /404.html  404
